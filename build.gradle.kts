@@ -18,6 +18,8 @@ dependencies {
     annotationProcessor("io.micronaut:micronaut-http-validation")
     annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
     implementation("io.micronaut:micronaut-management")
+    annotationProcessor("io.micronaut.sourcegen:micronaut-sourcegen-generator-java")
+    implementation("io.micronaut.sourcegen:micronaut-sourcegen-annotations")
     implementation("io.micronaut.serde:micronaut-serde-jackson")
     compileOnly("io.micronaut:micronaut-http-client")
     runtimeOnly("ch.qos.logback:logback-classic")
