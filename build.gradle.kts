@@ -20,6 +20,7 @@ dependencies {
     implementation("io.micronaut:micronaut-management")
     annotationProcessor("io.micronaut.sourcegen:micronaut-sourcegen-generator-java")
     implementation("io.micronaut.sourcegen:micronaut-sourcegen-annotations")
+        testImplementation("org.skyscreamer:jsonassert:2.0-rc1")
     implementation("io.micronaut.serde:micronaut-serde-jackson")
     compileOnly("io.micronaut:micronaut-http-client")
     runtimeOnly("ch.qos.logback:logback-classic")
