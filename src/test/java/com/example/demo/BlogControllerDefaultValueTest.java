@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import io.micronaut.context.annotation.Property;
 import io.micronaut.core.annotation.NonNull;
 import io.micronaut.core.type.Argument;
 import io.micronaut.http.HttpRequest;
@@ -19,12 +20,13 @@ public class BlogControllerDefaultValueTest {
 
     private static final @NonNull Argument<List<Release>> ARG_LIST_RELEASES = Argument.listOf(Release.class);
 
+    @Property(name = "blog.releases-per-page", value = "10")
     @Test
     void test(@Client("/") HttpClient client) {
         BlockingHttpClient httpClient = client.toBlocking();
         HttpRequest<?> request = HttpRequest.GET("/blog");
         List<Release> releases = assertDoesNotThrow(() -> httpClient.retrieve(request, ARG_LIST_RELEASES));
-        assertEquals(5, releases.size());
+        assertEquals(10, releases.size());
 
     }
 }
