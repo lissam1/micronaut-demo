@@ -5,6 +5,6 @@ import io.micronaut.core.bind.annotation.Bindable;
 
 @ConfigurationProperties("blog")
 public interface BlogConfiguration {
-    @Bindable(defaultValue = "5")
+    @Bindable()
     Integer getReleasesPerPage();
 }

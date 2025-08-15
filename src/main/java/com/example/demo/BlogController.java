@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import io.micronaut.context.annotation.Value;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 
@@ -10,8 +11,8 @@ public class BlogController {
     private final int max;
     private final BlogRepository blogRepository;
 
-    public BlogController(BlogConfiguration blogConfiguration, BlogRepository blogRepository) {
-        this.max = blogConfiguration.getReleasesPerPage();
+    public BlogController(@Value("${blog.releases-per-page:5}") Integer max, BlogRepository blogRepository) {
+        this.max = max;
         this.blogRepository = blogRepository;
     }
 

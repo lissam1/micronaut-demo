@@ -19,7 +19,9 @@ public class BlogRepository {
             new Release("Micronaut Release 4.8.3"),
             new Release("Micronaut Release 4.8.2"),
             new Release("Micronaut Release 4.8.1"),
+            new Release("Micronaut Release 4.8.0"),
             new Release("Micronaut Release 4.8.0")
+
             );
 
     public List<Release> findAll(int max){

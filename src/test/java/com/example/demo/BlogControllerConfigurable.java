@@ -15,8 +15,9 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@Property(name = "blog.releases-per-page", value = "10")
 @MicronautTest
-public class BlogControllerDefaultValueTest {
+public class BlogControllerConfigurable {
 
     private static final @NonNull Argument<List<Release>> ARG_LIST_RELEASES = Argument.listOf(Release.class);
 
@@ -25,7 +26,7 @@ public class BlogControllerDefaultValueTest {
         BlockingHttpClient httpClient = client.toBlocking();
         HttpRequest<?> request = HttpRequest.GET("/blog");
         List<Release> releases = assertDoesNotThrow(() -> httpClient.retrieve(request, ARG_LIST_RELEASES));
-        assertEquals(5, releases.size());
+        assertEquals(10, releases.size());
 
     }
 }
