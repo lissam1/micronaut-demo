@@ -11,7 +11,7 @@ public class BlogController {
     private final int max;
     private final BlogRepository blogRepository;
 
-    public BlogController(@Value("${blog.releases-per-page:5}") Integer max, BlogRepository blogRepository) {
+    public BlogController(@Value("${blog.releases-per-page}") Integer max, BlogRepository blogRepository) {
         this.max = max;
         this.blogRepository = blogRepository;
     }
