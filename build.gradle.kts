@@ -20,13 +20,14 @@ dependencies {
     implementation("io.micronaut:micronaut-management")
     annotationProcessor("io.micronaut.sourcegen:micronaut-sourcegen-generator-java")
     implementation("io.micronaut.sourcegen:micronaut-sourcegen-annotations")
-        testImplementation("org.skyscreamer:jsonassert:2.0-rc1")
+    testImplementation("org.skyscreamer:jsonassert:2.0-rc1")
     implementation("io.micronaut.serde:micronaut-serde-jackson")
     compileOnly("io.micronaut:micronaut-http-client")
     runtimeOnly("ch.qos.logback:logback-classic")
     testImplementation("io.micronaut:micronaut-http-client")
     testImplementation("io.micronaut.test:micronaut-test-junit5")
     testImplementation("org.junit.jupiter:junit-jupiter-params")
+    implementation("io.netty:netty-bom:4.2.4.Final")
 }
 
 
