@@ -1,9 +1,6 @@
 package com.example.demo;
 
-import io.micronaut.http.annotation.Controller;
-import io.micronaut.http.annotation.Get;
-import io.micronaut.http.annotation.PathVariable;
-import io.micronaut.http.annotation.QueryValue;
+import io.micronaut.http.annotation.*;
 import jakarta.annotation.Nullable;
 
 import java.util.Collections;
@@ -28,4 +25,9 @@ public class Index {
         return INDEX;
     }
 
+    @Get("/header")
+    Map<String, Object> headerIndex(@Header String userAgent) {
+        log.info("userAgent: " + userAgent);
+        return INDEX;
+    }
 }
