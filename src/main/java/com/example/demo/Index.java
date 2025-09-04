@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import io.micronaut.http.HttpHeaders;
 import io.micronaut.http.annotation.*;
 import jakarta.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public class Index {
     }
 
     @Get("/header")
-    Map<String, Object> headerIndex(@Header String userAgent) {
+    Map<String, Object> headerIndex(@Header(HttpHeaders.USER_AGENT) String userAgent) {
         log.info("userAgent: " + userAgent);
         return INDEX;
     }
