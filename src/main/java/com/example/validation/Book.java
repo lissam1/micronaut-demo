@@ -1,4 +1,4 @@
-package com.example;
+package com.example.validation;
 
 import io.micronaut.core.annotation.Introspected;
 import io.micronaut.core.annotation.Nullable;

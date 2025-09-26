@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.validation.Book;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
 import jakarta.validation.Validator;
 import org.junit.jupiter.api.Test;
