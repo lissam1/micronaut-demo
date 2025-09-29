@@ -12,25 +12,28 @@ repositories {
 }
 
 dependencies {
-    //validation
     annotationProcessor("io.micronaut.validation:micronaut-validation-processor")
-    implementation("io.micronaut.validation:micronaut-validation")
     annotationProcessor("io.micronaut:micronaut-http-validation")
     annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
     annotationProcessor("io.micronaut.jaxrs:micronaut-jaxrs-processor")
+    annotationProcessor("io.micronaut.sourcegen:micronaut-sourcegen-generator-java")
+
+    implementation("io.netty:netty-bom:4.2.4.Final")
+    implementation("io.micronaut.validation:micronaut-validation")
     implementation("io.micronaut:micronaut-management")
     implementation("io.micronaut.jaxrs:micronaut-jaxrs-server")
-    annotationProcessor("io.micronaut.sourcegen:micronaut-sourcegen-generator-java")
     implementation("io.micronaut.sourcegen:micronaut-sourcegen-annotations")
-    testImplementation("org.skyscreamer:jsonassert:2.0-rc1")
     implementation("io.micronaut.serde:micronaut-serde-jackson")
+    implementation("io.micronaut.problem:micronaut-problem-json")
+
     compileOnly("io.micronaut:micronaut-http-client")
     runtimeOnly("ch.qos.logback:logback-classic")
+
+    testImplementation("org.skyscreamer:jsonassert:2.0-rc1")
     testImplementation("io.micronaut:micronaut-http-client")
     testImplementation("io.micronaut.test:micronaut-test-junit5")
     testImplementation("org.junit.jupiter:junit-jupiter-params")
     testAnnotationProcessor("io.micronaut.jaxrs:micronaut-jaxrs-processor")
-    implementation("io.netty:netty-bom:4.2.4.Final")
 }
 
 
