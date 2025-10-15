@@ -17,6 +17,7 @@ dependencies {
     annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
     annotationProcessor("io.micronaut.jaxrs:micronaut-jaxrs-processor")
     annotationProcessor("io.micronaut.sourcegen:micronaut-sourcegen-generator-java")
+    annotationProcessor("io.micronaut.openapi:micronaut-openapi")
 
     implementation("io.netty:netty-bom:4.2.4.Final")
     implementation("io.micronaut.validation:micronaut-validation")
@@ -26,6 +27,8 @@ dependencies {
     implementation("io.micronaut.serde:micronaut-serde-jackson")
     implementation("io.micronaut.problem:micronaut-problem-json")
 
+    compileOnly("io.micronaut.openapi:micronaut-openapi-annotations")
+    implementation("io.micronaut.openapi:micronaut-openapi")
     compileOnly("io.micronaut:micronaut-http-client")
     runtimeOnly("ch.qos.logback:logback-classic")
 
@@ -73,5 +76,6 @@ micronaut {
 tasks.named<io.micronaut.gradle.docker.NativeImageDockerfile>("dockerfileNative") {
     jdkVersion = "21"
 }
+
 
 
