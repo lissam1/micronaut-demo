@@ -1,5 +1,7 @@
-package com.example.demo;
+package com.example.demo.test;
 
+import com.example.demo.BlogRepository;
+import com.example.demo.Release;
 import io.micronaut.context.annotation.Value;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
