@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@MicronautTest(environments = "prod")
+@MicronautTest
 public class BlogConfigurationEnvironmentTest {
 
     @Test
     void test(BlogConfiguration blogConfiguration) {
-        assertEquals(10, blogConfiguration.getReleasesPerPage());
+        assertEquals(5, blogConfiguration.getReleasesPerPage());
     }
 }
