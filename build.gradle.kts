@@ -2,6 +2,7 @@ plugins {
     id("io.micronaut.application") version "4.6.1"
     id("com.gradleup.shadow") version "8.3.7"
     id("io.micronaut.aot") version "4.6.1"
+  id("org.openrewrite.rewrite") version "7.21.0"
 }
 
 version = "0.1"
