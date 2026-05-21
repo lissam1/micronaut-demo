@@ -1,7 +1,7 @@
 plugins {
-    id("io.micronaut.application") version "4.6.1"
-    id("com.gradleup.shadow") version "8.3.7"
-    id("io.micronaut.aot") version "4.6.1"
+    id("io.micronaut.application") version "5.0.0"
+    id("com.gradleup.shadow") version "9.4.1"
+    id("io.micronaut.aot") version "5.0.0"
   id("org.openrewrite.rewrite") version "7.21.0"
 }
 
@@ -20,7 +20,6 @@ dependencies {
     annotationProcessor("io.micronaut.sourcegen:micronaut-sourcegen-generator-java")
     annotationProcessor("io.micronaut.openapi:micronaut-openapi")
 
-    implementation("io.netty:netty-bom:4.2.7.Final")
     implementation("io.micronaut.validation:micronaut-validation")
     implementation("io.micronaut:micronaut-management")
     implementation("io.micronaut.jaxrs:micronaut-jaxrs-server")
@@ -45,8 +44,8 @@ application {
     mainClass = "com.example.Application"
 }
 java {
-    sourceCompatibility = JavaVersion.toVersion("21")
-    targetCompatibility = JavaVersion.toVersion("21")
+    sourceCompatibility = JavaVersion.toVersion("25")
+    targetCompatibility = JavaVersion.toVersion("25")
 }
 
 
@@ -75,8 +74,6 @@ micronaut {
 
 
 tasks.named<io.micronaut.gradle.docker.NativeImageDockerfile>("dockerfileNative") {
-    jdkVersion = "21"
+    jdkVersion = "25"
 }
-
-
 
