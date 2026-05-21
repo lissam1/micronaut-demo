@@ -29,7 +29,7 @@ This project serves as a playground for practicing and testing Micronaut feature
 
 ## Requirements
 
-- Java 17 or newer
+- Java 25
 - Gradle (or use the `./gradlew` wrapper)
 
 ## Getting Started
